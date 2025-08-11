@@ -2,6 +2,9 @@
   "app_title": { "message": "Verificador de No Seguidores de Instagram" },
   "btn_check": { "message": "Comprobar" },
   "btn_status_checking": { "message": "Comprobando..." },
+  "caption_warning": {
+    "message": "Advertencias"
+  },
   "warning_keep_tab_open": {
     "message": "Mantén la pestaña de Instagram abierta hasta que el proceso finalice."
   },

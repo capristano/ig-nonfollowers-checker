@@ -2,6 +2,9 @@
   "app_title": { "message": "Instagram Nicht-Follower-Checker" },
   "btn_check": { "message": "Prüfen" },
   "btn_status_checking": { "message": "Überprüfen..." },
+  "caption_warning": {
+    "message": "Warnungen"
+  },
   "warning_keep_tab_open": {
     "message": "Lassen Sie den Instagram-Tab geöffnet, bis der Vorgang abgeschlossen ist."
   },

@@ -2,6 +2,9 @@
   "app_title": { "message": "Vérificateur de Non-Abonnés Instagram" },
   "btn_check": { "message": "Vérifier" },
   "btn_status_checking": { "message": "Vérification..." },
+  "caption_warning": {
+    "message": "Avertissements"
+  },
   "warning_keep_tab_open": {
     "message": "Gardez l’onglet Instagram ouvert jusqu’à la fin du processus."
   },

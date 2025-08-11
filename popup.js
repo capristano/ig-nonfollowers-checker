@@ -1,6 +1,7 @@
 // need to keep all elements references here, better for maintenance
 const appTitle = document.getElementById('app_title');
 const btnCheck = document.getElementById('btn_check');
+const captionWarning = document.getElementById('caption_warning');
 const warningKeepTabOpen = document.getElementById('warning_keep_tab_open');
 const warningNoInteraction = document.getElementById('warning_no_interaction');
 const warningTimeDepends = document.getElementById('warning_time_depends');
@@ -11,6 +12,7 @@ const resultBox = document.getElementById('result');
 function applyI18n() {
   appTitle.textContent = chrome.i18n.getMessage('app_title');
   btnCheck.textContent = chrome.i18n.getMessage('btn_check');
+  captionWarning.textContent = chrome.i18n.getMessage('caption_warning');
   warningKeepTabOpen.textContent = chrome.i18n.getMessage(
     'warning_keep_tab_open',
   );
@@ -216,10 +218,6 @@ btnCheck.onclick = async () => {
             e.preventDefault();
             chrome.tabs.create({ url: link.href });
           });
-          link.style.display = 'block';
-          link.style.color = '#385898';
-          link.style.textDecoration = 'none';
-          link.style.marginBottom = '4px';
           resultBox.appendChild(link);
         });
 

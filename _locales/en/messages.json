@@ -2,6 +2,9 @@
   "app_title": { "message": "Instagram Nonfollowers Checker" },
   "btn_check": { "message": "Check" },
   "btn_status_checking": { "message": "Checking..." },
+  "caption_warning": {
+    "message": "Warnings"
+  },
   "warning_keep_tab_open": {
     "message": "Keep the Instagram tab open until the process is complete."
   },
