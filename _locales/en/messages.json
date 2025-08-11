@@ -1,0 +1,25 @@
+{
+  "app_title": { "message": "Instagram Nonfollowers Checker" },
+  "btn_check": { "message": "Check" },
+  "btn_status_checking": { "message": "Checking..." },
+  "warning_keep_tab_open": {
+    "message": "Keep the Instagram tab open until the process is complete."
+  },
+  "warning_no_interaction": {
+    "message": "Do not interact with the Instagram tab while the process is running."
+  },
+  "warning_time_depends": {
+    "message": "The duration depends on how many followers/following you have."
+  },
+  "warning_other_tabs_ok": {
+    "message": "You can use other Chrome tabs normally."
+  },
+  "warning_how_it_works": {
+    "message": "The extension scrolls your follower/following lists to collect data."
+  },
+  "err_no_ig_tab": {
+    "message": "No Instagram tab found. Open instagram.com and try again."
+  },
+  "err_generic": { "message": "Something went wrong." },
+  "header_not_following_back": { "message": "❌ Not following you back ($1):" }
+}

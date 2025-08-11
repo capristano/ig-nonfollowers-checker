@@ -22,9 +22,8 @@ No API keys. No risk. Just open Instagram and click **"Check"**.
 1. Install the extension from the [Chrome Web Store](https://chrome.google.com/webstore) (coming soon)
 2. Go to [instagram.com](https://www.instagram.com) and make sure you're logged in.
 3. Open your profile page.
-4. Click the **Followers** and **Following** modals at least once (the plugin will do it automatically after you click "Check").
-5. Click the **Check** button from the extension popup.
-6. Wait a few seconds — a floating panel will show you the users who **don’t follow you back**, each as a clickable link.
+4. Click the **Check** button from the extension popup.
+5. Wait until you see the users who **don’t follow you back**, each will be a clickable link for they profile.
 
 ---
 
@@ -41,11 +40,12 @@ This extension:
 
 ## 🔧 Permissions Used
 
-| Permission                    | Why it's needed                                 |
-| ----------------------------- | ----------------------------------------------- |
-| `activeTab`                   | To read and scrape Instagram on the open tab    |
-| `scripting`                   | To inject and run the follower comparison logic |
-| `https://www.instagram.com/*` | To access Instagram content                     |
+| Permission                    | Why it's needed                                                       |
+| ----------------------------- | --------------------------------------------------------------------- |
+| `activeTab`                   | To read and scrape Instagram on the open tab                          |
+| `scripting`                   | To inject and run the follower comparison logic                       |
+| `tabs`                        | To query information about the user's open tabs (needed for scraping) |
+| `https://www.instagram.com/*` | To access Instagram content                                           |
 
 ---
 
@@ -59,21 +59,9 @@ This extension:
 
 ---
 
-## 📁 Folder Structure
-
-instagram-followers-checker/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── icons/
-│ └── icon128.png
-
----
-
 ## 💡 Future Plans
 
 - [ ] Dark mode
-- [ ] Option to **automatically** detect users that don’t follow back
 
 ---
 
@@ -105,5 +93,5 @@ A: Only if you already follow them (just like on Instagram).
 
 ## ✉️ Contact
 
-Developed by [Your Name or GitHub link]
-For feedback or support: [your-email@example.com]
+Developed by Cleiton Capristano
+For feedback or support: cleiton.capristano@gmail.com

@@ -1,9 +1,67 @@
-const btnCheck = document.getElementById('check');
+// need to keep all elements references here, better for maintenance
+const appTitle = document.getElementById('app_title');
+const btnCheck = document.getElementById('btn_check');
+const warningKeepTabOpen = document.getElementById('warning_keep_tab_open');
+const warningNoInteraction = document.getElementById('warning_no_interaction');
+const warningTimeDepends = document.getElementById('warning_time_depends');
+const warningOtherTabsOk = document.getElementById('warning_other_tabs_ok');
+const warningHowItWorks = document.getElementById('warning_how_it_works');
+const resultBox = document.getElementById('result');
+
+function applyI18n() {
+  appTitle.textContent = chrome.i18n.getMessage('app_title');
+  btnCheck.textContent = chrome.i18n.getMessage('btn_check');
+  warningKeepTabOpen.textContent = chrome.i18n.getMessage(
+    'warning_keep_tab_open',
+  );
+  warningNoInteraction.textContent = chrome.i18n.getMessage(
+    'warning_no_interaction',
+  );
+  warningTimeDepends.textContent = chrome.i18n.getMessage(
+    'warning_time_depends',
+  );
+  warningOtherTabsOk.textContent = chrome.i18n.getMessage(
+    'warning_other_tabs_ok',
+  );
+  warningHowItWorks.textContent = chrome.i18n.getMessage(
+    'warning_how_it_works',
+  );
+}
+
+applyI18n();
+
+function getTabIdFromQuery() {
+  const params = new URLSearchParams(location.search);
+  const raw = params.get('tabId');
+  const id = Number(raw);
+  return Number.isFinite(id) ? id : null;
+}
+
+async function findInstagramTabId() {
+  // pick an active IG tab, or last one in list
+  const tabs = await chrome.tabs.query({ url: '*://www.instagram.com/*' });
+  if (!tabs.length) return null;
+  const active = tabs.find((t) => t.active) || tabs[0];
+  return active.id ?? null;
+}
+
+function changeBtnCheckStatus(status) {
+  btnCheck.disabled = status;
+  btnCheck.textContent = chrome.i18n.getMessage(
+    status ? 'btn_status_checking' : 'btn_check',
+  );
+}
 
 btnCheck.onclick = async () => {
-  btnCheck.disabled = true;
-  const resultBox = document.getElementById('result');
-  resultBox.textContent = 'Checking...';
+  changeBtnCheckStatus(true);
+
+  let targetTabId = getTabIdFromQuery();
+  if (!targetTabId) targetTabId = await findInstagramTabId();
+  if (!targetTabId) {
+    resultBox.textContent = chrome.i18n.getMessage('err_no_ig_tab');
+    changeBtnCheckStatus(false);
+    return;
+  }
 
   const runInPage = async () => {
     function sleep(ms) {
@@ -120,12 +178,13 @@ btnCheck.onclick = async () => {
   chrome.tabs.query({ active: true, currentWindow: true }, async ([tab]) => {
     chrome.scripting.executeScript(
       {
-        target: { tabId: tab.id },
+        target: { tabId: targetTabId },
         func: runInPage,
       },
       (results) => {
         if (chrome.runtime.lastError) {
           resultBox.textContent = `Error: ${chrome.runtime.lastError.message}`;
+          changeBtnCheckStatus(false);
           return;
         }
 
@@ -133,15 +192,39 @@ btnCheck.onclick = async () => {
         const { notFollowingBack } = data;
 
         if (!notFollowingBack) {
-          resultBox.textContent = 'Something went wrong.';
+          resultBox.textContent = chrome.i18n.getMessage('err_generic');
+          changeBtnCheckStatus(false);
           return;
         }
 
-        const header = `❌ Não te seguem de volta (${notFollowingBack.length}):\n`;
-        const list = notFollowingBack.join('\n');
+        resultBox.innerHTML = '';
 
-        resultBox.textContent = `${header}${list}`;
-        btnCheck.disabled = false;
+        const header = document.createElement('div');
+        header.textContent = chrome.i18n.getMessage(
+          'header_not_following_back',
+          [String(notFollowingBack.length)],
+        );
+        header.style.fontWeight = 'bold';
+        header.style.marginBottom = '6px';
+        resultBox.appendChild(header);
+
+        notFollowingBack.forEach((username) => {
+          const link = document.createElement('a');
+          link.href = `https://www.instagram.com/${username}/`;
+          link.textContent = username;
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            chrome.tabs.create({ url: link.href });
+          });
+          link.style.display = 'block';
+          link.style.color = '#385898';
+          link.style.textDecoration = 'none';
+          link.style.marginBottom = '4px';
+          resultBox.appendChild(link);
+        });
+
+        changeBtnCheckStatus(false);
+        btnCheck.textContent = chrome.i18n.getMessage('btn_check');
       },
     );
   });

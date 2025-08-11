@@ -1,0 +1,25 @@
+{
+  "app_title": { "message": "Verificador de No Seguidores de Instagram" },
+  "btn_check": { "message": "Comprobar" },
+  "btn_status_checking": { "message": "Comprobando..." },
+  "warning_keep_tab_open": {
+    "message": "Mantén la pestaña de Instagram abierta hasta que el proceso finalice."
+  },
+  "warning_no_interaction": {
+    "message": "No interactúes con la pestaña de Instagram mientras el proceso esté en ejecución."
+  },
+  "warning_time_depends": {
+    "message": "La duración depende de cuántos seguidores/seguidos tengas."
+  },
+  "warning_other_tabs_ok": {
+    "message": "Puedes usar otras pestañas de Chrome normalmente."
+  },
+  "warning_how_it_works": {
+    "message": "La extensión desplaza tus listas de seguidores/seguidos para recopilar datos."
+  },
+  "err_no_ig_tab": {
+    "message": "No se encontró ninguna pestaña de Instagram. Abre instagram.com e inténtalo de nuevo."
+  },
+  "err_generic": { "message": "Algo salió mal." },
+  "header_not_following_back": { "message": "❌ No te sigue de vuelta ($1):" }
+}

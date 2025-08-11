@@ -1,0 +1,27 @@
+{
+  "app_title": { "message": "Verificador de Não Seguidores do Instagram" },
+  "btn_check": { "message": "Verificar" },
+  "btn_status_checking": { "message": "Verificando..." },
+  "warning_keep_tab_open": {
+    "message": "Mantenha a aba do Instagram aberta até o processo ser concluído."
+  },
+  "warning_no_interaction": {
+    "message": "Não interaja com a aba do Instagram enquanto o processo estiver em execução."
+  },
+  "warning_time_depends": {
+    "message": "A duração depende da quantidade de seguidores/seguidos que você tem."
+  },
+  "warning_other_tabs_ok": {
+    "message": "Você pode usar outras abas do Chrome normalmente."
+  },
+  "warning_how_it_works": {
+    "message": "A extensão rola suas listas de seguidores/seguidos para coletar dados."
+  },
+  "err_no_ig_tab": {
+    "message": "Nenhuma aba do Instagram encontrada. Abra instagram.com e tente novamente."
+  },
+  "err_generic": { "message": "Algo deu errado." },
+  "header_not_following_back": {
+    "message": "❌ Não está seguindo você de volta ($1):"
+  }
+}

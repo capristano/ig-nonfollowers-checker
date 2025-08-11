@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>IG Checker</title>
+    <title>IG NF Checker</title>
     <style>
       body {
         font-family: Arial;
@@ -18,7 +18,6 @@
         white-space: pre-wrap;
         max-height: 300px;
         overflow-y: auto;
-        background: #f0f0f0;
         padding: 5px;
         border-radius: 4px;
         font-size: 13px;
@@ -26,9 +25,18 @@
     </style>
   </head>
   <body>
-    <h3>Instagram Nonfollowers Checker</h3>
-    <button id="check">Check</button>
+    <h3 id="app_title"></h3>
+    <button id="btn_check"></button>
     <div id="result"></div>
+    <div id="warnings">
+      <ul>
+        <li><span id="warning_keep_tab_open"></span></li>
+        <li><span id="warning_no_interaction"></span></li>
+        <li><span id="warning_time_depends"></span></li>
+        <li><span id="warning_other_tabs_ok"></span></li>
+        <li><span id="warning_how_it_works"></span></li>
+      </ul>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
