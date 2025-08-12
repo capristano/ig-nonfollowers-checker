@@ -1,9 +1,16 @@
 {
   "app_title": { "message": "Verificador de No Seguidores de Instagram" },
-  "btn_check": { "message": "Comprobar" },
-  "btn_status_checking": { "message": "Comprobando..." },
-  "caption_warning": {
-    "message": "Advertencias"
+  "btn_check": { "message": "Verificar" },
+  "btn_status_checking": { "message": "Verificando..." },
+  "caption_warning": { "message": "Advertencias" },
+  "warning_keep_open": {
+    "message": "Verificando… mantén esta pestaña abierta hasta que termine."
+  },
+  "warning_loading_followers": {
+    "message": "Cargando SEGUIDORES…"
+  },
+  "warning_loading_following": {
+    "message": "Cargando SIGUIENDO…"
   },
   "warning_keep_tab_open": {
     "message": "Mantén la pestaña de Instagram abierta hasta que el proceso finalice."
@@ -12,17 +19,22 @@
     "message": "No interactúes con la pestaña de Instagram mientras el proceso esté en ejecución."
   },
   "warning_time_depends": {
-    "message": "La duración depende de cuántos seguidores/seguidos tengas."
+    "message": "La duración depende de cuántos seguidores/siguiendo tengas."
   },
   "warning_other_tabs_ok": {
     "message": "Puedes usar otras pestañas de Chrome normalmente."
   },
   "warning_how_it_works": {
-    "message": "La extensión desplaza tus listas de seguidores/seguidos para recopilar datos."
+    "message": "La extensión interactúa con tus listas de seguidores/siguiendo para recopilar datos."
   },
   "err_no_ig_tab": {
     "message": "No se encontró ninguna pestaña de Instagram. Abre instagram.com e inténtalo de nuevo."
   },
   "err_generic": { "message": "Algo salió mal." },
-  "header_not_following_back": { "message": "❌ No te sigue de vuelta ($1):" }
+  "header_not_following_back": {
+    "message": "❌ No te sigue de vuelta ($1):"
+  },
+  "warning_where_get_results": {
+    "message": "Esta aplicación permanecerá abierta en la barra de herramientas de tu sistema hasta que la cierres."
+  }
 }

@@ -2,8 +2,15 @@
   "app_title": { "message": "Verificador de Não Seguidores do Instagram" },
   "btn_check": { "message": "Verificar" },
   "btn_status_checking": { "message": "Verificando..." },
-  "caption_warning": {
-    "message": "Avisos"
+  "caption_warning": { "message": "Avisos" },
+  "warning_keep_open": {
+    "message": "Verificando… mantenha esta aba aberta até terminar."
+  },
+  "warning_loading_followers": {
+    "message": "Carregando SEGUIDORES…"
+  },
+  "warning_loading_following": {
+    "message": "Carregando SEGUINDO…"
   },
   "warning_keep_tab_open": {
     "message": "Mantenha a aba do Instagram aberta até o processo ser concluído."
@@ -26,5 +33,8 @@
   "err_generic": { "message": "Algo deu errado." },
   "header_not_following_back": {
     "message": "❌ Não está seguindo você de volta ($1):"
+  },
+  "warning_where_get_results": {
+    "message": "Este app estará aberto na barra de ferramentas do seu sistema operacional até que você o feche."
   }
 }

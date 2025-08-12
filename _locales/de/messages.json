@@ -1,9 +1,16 @@
 {
   "app_title": { "message": "Instagram Nicht-Follower-Checker" },
   "btn_check": { "message": "Prüfen" },
-  "btn_status_checking": { "message": "Überprüfen..." },
-  "caption_warning": {
-    "message": "Warnungen"
+  "btn_status_checking": { "message": "Wird überprüft..." },
+  "caption_warning": { "message": "Warnungen" },
+  "warning_keep_open": {
+    "message": "Überprüfung… lassen Sie diesen Tab geöffnet, bis es fertig ist."
+  },
+  "warning_loading_followers": {
+    "message": "Lade FOLLOWER…"
+  },
+  "warning_loading_following": {
+    "message": "Lade FOLGE ICH…"
   },
   "warning_keep_tab_open": {
     "message": "Lassen Sie den Instagram-Tab geöffnet, bis der Vorgang abgeschlossen ist."
@@ -12,17 +19,22 @@
     "message": "Interagieren Sie nicht mit dem Instagram-Tab, während der Vorgang läuft."
   },
   "warning_time_depends": {
-    "message": "Die Dauer hängt davon ab, wie viele Follower/Folgte Sie haben."
+    "message": "Die Dauer hängt davon ab, wie viele Follower/Folgende Sie haben."
   },
   "warning_other_tabs_ok": {
-    "message": "Sie können andere Chrome-Tabs normal verwenden."
+    "message": "Sie können andere Chrome-Tabs wie gewohnt verwenden."
   },
   "warning_how_it_works": {
-    "message": "Die Erweiterung scrollt durch Ihre Follower/Folgte-Listen, um Daten zu sammeln."
+    "message": "Die Erweiterung interagiert mit Ihren Follower-/Folge-Listen, um Daten zu sammeln."
   },
   "err_no_ig_tab": {
-    "message": "Kein Instagram-Tab gefunden. Öffne instagram.com und versuche es erneut."
+    "message": "Kein Instagram-Tab gefunden. Öffnen Sie instagram.com und versuchen Sie es erneut."
   },
   "err_generic": { "message": "Etwas ist schiefgelaufen." },
-  "header_not_following_back": { "message": "❌ Folgt dir nicht zurück ($1):" }
+  "header_not_following_back": {
+    "message": "❌ Folgt Ihnen nicht zurück ($1):"
+  },
+  "warning_where_get_results": {
+    "message": "Diese App bleibt in der System-Taskleiste geöffnet, bis Sie sie schließen."
+  }
 }

@@ -2,29 +2,39 @@
   "app_title": { "message": "Vérificateur de Non-Abonnés Instagram" },
   "btn_check": { "message": "Vérifier" },
   "btn_status_checking": { "message": "Vérification..." },
-  "caption_warning": {
-    "message": "Avertissements"
+  "caption_warning": { "message": "Avertissements" },
+  "warning_keep_open": {
+    "message": "Vérification… gardez cet onglet ouvert jusqu'à la fin."
+  },
+  "warning_loading_followers": {
+    "message": "Chargement des ABONNÉS…"
+  },
+  "warning_loading_following": {
+    "message": "Chargement des ABONNEMENTS…"
   },
   "warning_keep_tab_open": {
-    "message": "Gardez l’onglet Instagram ouvert jusqu’à la fin du processus."
+    "message": "Gardez l'onglet Instagram ouvert jusqu'à ce que le processus soit terminé."
   },
   "warning_no_interaction": {
-    "message": "Ne pas interagir avec l’onglet Instagram pendant l’exécution du processus."
+    "message": "N'interagissez pas avec l'onglet Instagram pendant que le processus est en cours."
   },
   "warning_time_depends": {
-    "message": "La durée dépend du nombre de followers/suivis que vous avez."
+    "message": "La durée dépend du nombre d'abonnés/abonnements que vous avez."
   },
   "warning_other_tabs_ok": {
-    "message": "Vous pouvez utiliser normalement d’autres onglets Chrome."
+    "message": "Vous pouvez utiliser d'autres onglets Chrome normalement."
   },
   "warning_how_it_works": {
-    "message": "L’extension fait défiler vos listes de followers/suivis pour collecter des données."
+    "message": "L'extension interagit avec vos listes d'abonnés/abonnements pour collecter des données."
   },
   "err_no_ig_tab": {
     "message": "Aucun onglet Instagram trouvé. Ouvrez instagram.com et réessayez."
   },
   "err_generic": { "message": "Une erreur s'est produite." },
   "header_not_following_back": {
-    "message": "❌ Ne vous suit pas en retour ($1):"
+    "message": "❌ Ne vous suit pas en retour ($1) :"
+  },
+  "warning_where_get_results": {
+    "message": "Cette application restera ouverte dans la barre d'outils de votre système jusqu'à ce que vous la fermiez."
   }
 }
